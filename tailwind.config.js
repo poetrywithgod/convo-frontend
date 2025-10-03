@@ -1,25 +1,20 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
+  darkMode: "class", // Enable class-based dark mode
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
-  darkMode: "class", // allows dark/light mode toggle using a "dark" class
   theme: {
     extend: {
       colors: {
-        convo: {
-          dark: "#0f0f1a",     // main dark background
-          accent: "#7c3aed",   // purple accent
-          highlight: "#ff6b81", // reaction highlight
-          card: "#1a1a2e",     // slightly lighter dark for cards
-        },
-      },
-      fontFamily: {
-        sans: ["Inter", "sans-serif"],
-      },
-      boxShadow: {
-        convo: "0 4px 20px rgba(124, 58, 237, 0.3)", // fancy purple glow
+        "convo-dark": "#0f0f1a",
+        "convo-light": "#f5f5f7",   // Light mode background
+        "convo-accent": "#4f46e5",
+        "convo-accent-light": "#818cf8",
+        "convo-border": "#2a2a40",
+        "convo-text-dark": "#e5e7eb",  // Dark mode text
+        "convo-text-light": "#1a1a1a", // Light mode text
       },
     },
   },
